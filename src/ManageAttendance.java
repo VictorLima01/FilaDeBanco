@@ -2,8 +2,10 @@ public class ManageAttendance {
     private No inicio, fim;
     public int cont = 0;
     public int contIdoso = 0;
+    public int size = 0;
 
     public ManageAttendance(int size) {
+        this.size = size;
         inicio = fim = null;
     }
 

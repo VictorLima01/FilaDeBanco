@@ -19,6 +19,7 @@ public class AppFila {
             System.out.print("Opção:" );
             opcao = scanner.nextInt();
             if(opcao == 1){
+
                 System.out.print("Name: ");
                 name = scanner.next();
                 System.out.print("Idade: ");
@@ -26,11 +27,13 @@ public class AppFila {
                 if(age < 16){
                     age = 18;
                 }
-                fila.addClient(name, age);
                 cont++;
-                if(cont > 5){
+                if(cont > fila.size){
                     System.out.println("A fila está cheia, novo cliente não foi inserido ");
+                }else{
+                    fila.addClient(name, age);
                 }
+
             }else if(opcao == 2){
                 System.out.println("Primeiro da fila: " + fila.showNext());
             }else if(opcao == 3){
